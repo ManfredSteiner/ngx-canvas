@@ -22,6 +22,5 @@ Use command `git checkout <branch>` to get one of the following branches:
 * [step1-canvas-component](../../blob/step1-canvas-component/README.md)  
   + [Tutorial][tutorial-step1]: Making An Angular Canvas Component
 
-
 [tutorial]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html
 [tutorial-step1]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html#making-an-angular-canvas-component
