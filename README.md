@@ -24,4 +24,4 @@ Use command `git checkout <branch>` to get one of the following branches:
 
 
 [tutorial]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html
-[tutorial-step1]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html#making-an-angular-canvas-component"
+[tutorial-step1]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html#making-an-angular-canvas-component
