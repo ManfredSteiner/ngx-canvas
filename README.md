@@ -1,4 +1,4 @@
-# ngx-covas
+# ngx-canvas
 
 Tutorial see: [https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html](tutorial:)
 
@@ -22,5 +22,9 @@ Use command `git checkout <branch>` to get one of the following branches:
 * [step1-canvas-component](../../blob/step1-canvas-component/README.md)  
   + [Tutorial][tutorial-step1]: Making An Angular Canvas Component
 
+* [step2-canvas-change](../../blob/step2-canvas-change/README.md)  
+  + [Tutorial][tutorial-step2]: Drawing On The Canvas from Lifecycle Hooks
+
 [tutorial]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html
 [tutorial-step1]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html#making-an-angular-canvas-component
+[tutorial-step2]: https://teropa.info/blog/2016/12/12/graphics-in-angular-2.html#drawing-on-the-canvas-from-lifecycle-hooks
