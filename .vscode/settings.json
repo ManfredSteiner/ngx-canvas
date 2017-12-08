@@ -1,0 +1,26 @@
+{
+  "files.exclude": {
+    "**/node_modules/": true,
+    "**/e2e/": true,
+    "**/.gitkeep": true,
+    "**/dist": true,
+    "**/keys": true,
+    ".vscode/": true,
+    "**/.gitignore": true,
+    "**/.gitmodules": true,
+    "**/.angular-cli.json": true,
+    "**/.editorconfig": true,
+    "**/karma.conf.js":true,
+    "**/protractor.conf.js":true,
+    "**/polyfills.ts":true,
+    "**/tsconfig.*.json":true,
+    "**/LICENSE": true,
+    "*.log": true,
+    "**/package-lock.json": true,
+    "**/package.json": true,
+    "**/gulpfile.js": true,
+    "**/tsconfig.json": true,
+    "**/tslint.json": true
+  }
+}
+
