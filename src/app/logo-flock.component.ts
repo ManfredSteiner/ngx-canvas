@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, OnDestroy, ViewChild, ElementRef, Renderer, NgZone } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy, ViewChild, ElementRef, Renderer, NgZone, HostListener } from '@angular/core';
 import boids, { Flock } from 'boids';
 
 @Component({
@@ -15,7 +15,8 @@ export class LogoFlockComponent implements OnInit, OnDestroy {
     private _flock: Flock;
 
     constructor( private elRef: ElementRef,
-                 private renderer: Renderer) {
+                 private renderer: Renderer,
+                 private ngZone: NgZone) {
         this._flock = boids({
                                 boids: 200,             // The amount of boids to use
                                 speedLimit: 4,          // Max steps to take per tick
@@ -30,9 +31,22 @@ export class LogoFlockComponent implements OnInit, OnDestroy {
                             });
     }
 
+    @HostListener('window:resize') onResize() {
+        // Make sure canvas width doesn't exceed available width and
+        // preserve its aspect ratio.
+        const width = Math.min(800, this.elRef.nativeElement.offsetWidth);
+        const height = width / 800 * 500;
+        this.renderer.setElementStyle(this.canvasRef.nativeElement, 'width', `${width}px`);
+        this.renderer.setElementStyle(this.canvasRef.nativeElement, 'height', `${height}px`);
+    }
+
     ngOnInit() {
-        this.running = true;
-        this.paint();
+        this.onResize();
+        this.running = false;
+        for (let i = 0 ; i < 10 ; i++) {
+            this._flock.tick();
+        }
+        this.paint(false);
     }
 
     ngOnDestroy () {
@@ -42,16 +56,11 @@ export class LogoFlockComponent implements OnInit, OnDestroy {
     public toggleSimulation () {
         this.running = !this.running;
         if (this.running) {
-            this.paint();
+            this.ngZone.runOutsideAngular(() => this.paint(true));
         }
     }
 
-    private paint () {
-        // Check that we're still running.
-        if (!this.running) {
-            return;
-        }
-
+    private paint (loop = true) {
         // Paint current frame
         const ctx: CanvasRenderingContext2D =
             this.canvasRef.nativeElement.getContext('2d');
@@ -77,7 +86,10 @@ export class LogoFlockComponent implements OnInit, OnDestroy {
         }
 
         // Schedule next
-        requestAnimationFrame(() => this.paint());
+        // Schedule next
+        if (loop && this.running) {
+            requestAnimationFrame(() => this.paint(loop));
+        }
     }
 
     private paintA (ctx: CanvasRenderingContext2D) {

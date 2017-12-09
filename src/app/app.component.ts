@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    public title = 'ngx-canvas / step3';
+    public title = 'ngx-canvas / step4';
 
     constructor () {
     }
