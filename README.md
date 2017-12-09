@@ -26,9 +26,10 @@ Use command `git checkout <branch>` to get one of the following branches:
   + [Tutorial][tutorial-step2]: Drawing On The Canvas from Lifecycle Hooks
 
 * [step3-animation](../../blob/step2-animation/README.md)
-  **Important hint:**  
-  npm module *boids* is needed, so don't forget to call `npm install`!  
-  This module does not support typescript types. These types are defined in file [src/typings.d.ts](./src/typings.d.ts).  
+  
+  > **Important hint:**   
+  > npm module *boids* is needed, so don't forget to call `npm install`!  
+  > This module does not support typescript types. These types are defined in file [src/typings.d.ts](./src/typings.d.ts).  
   + [Tutorial][tutorial-step3]: Animating Canvas Graphics
   + [What is Boids?](https://en.wikipedia.org/wiki/Boids)
 
