@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { LogoComponent } from './logo.component';
+import { LogoFlockComponent } from './logo-flock.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, LogoComponent
+    AppComponent, LogoFlockComponent
   ],
   imports: [
     BrowserModule

@@ -1,7 +1,11 @@
-<div style="text-align:center; width:400px">
+<div style="text-align:center; width:500px">
     <h1>
         Welcome to {{ title }}!
     </h1>
-    <button class="button" (click)="onChanges()">{{buttonText}}</button>
-    <app-logo [particles]="particles"></app-logo>
+    <p>
+        This application is using the npm module <a href="https://www.npmjs.com/package/boids" target="_blank">boids</a>.<br>
+        See also <a href="https://de.wikipedia.org/wiki/Boids" target="_blank">Wikipedia Boids</a>
+
+    </p>
+    <app-logo-flock></app-logo-flock>
 </div>
